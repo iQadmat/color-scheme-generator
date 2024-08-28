@@ -1,0 +1,175 @@
+:root {
+  --color-1: #f55a5a;
+  --color-2: #2b283a;
+  --color-3: #fbf3ab;
+  --color-4: #aad1b6;
+  --color-5: #a626d3;
+  --bg-color: linear-gradient(to right, #000000, #434343);
+  --dark-bg: #303030;
+  --light-bg: white;
+  --dark-text: #1c1c1c;
+  --light-text: whitesmoke;
+  --dark-submit: #454545;
+  --border-color: #d1d5db;
+}
+
+*,
+**::before,
+**::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--dark-text);
+  font-family: "Inter", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body,
+section,
+select,
+.theme,
+.submit {
+  transition: all 0.25s ease;
+}
+
+/* Layout */
+
+section {
+  height: 500px;
+  width: 500px;
+  background: var(--light-bg);
+  display: grid;
+  grid-template-rows: 1.5fr 7.5fr 1fr;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Typography */
+
+p {
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Buttons */
+
+button {
+  border: none;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.theme {
+  position: absolute;
+  top: 1rem;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme:hover {
+  transform: scale(1.1);
+}
+
+.light-mode {
+  background: var(--dark-bg);
+  color: var(--light-text);
+}
+
+.dark-mode {
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+}
+
+.submit {
+  height: 42px;
+  width: 120px;
+  background: var(--light-bg);
+  color: var(--dark-text);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 0.75rem;
+}
+
+/* Inputs */
+
+input[type="color"] {
+  width: 60px;
+  height: 42px;
+  background: var(--light-bg);
+  border: 0.5px solid var(--border-color);
+}
+
+select {
+  width: 250px;
+  height: 42px;
+  background: var(--light-bg);
+  color: var(--dark-text);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 0 0.75em;
+  font-family: inherit;
+  font-size: 0.9rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("images/arrow-dark.svg") no-repeat right 0.25em center;
+  background-size: 30px;
+}
+
+option {
+  background: var(--light-bg);
+  color: var(--dark-text);
+}
+
+/* Design */
+
+.color-1 {
+  background: var(--color-1);
+}
+
+.color-2 {
+  background: var(--color-2);
+}
+
+.color-3 {
+  background: var(--color-3);
+}
+
+.color-4 {
+  background: var(--color-4);
+}
+
+.color-5 {
+  background: var(--color-5);
+}

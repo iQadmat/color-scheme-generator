@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Scheme Generator</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <button class="theme light-mode">
+        <i class="bx bx-moon"></i>
+      </button>
+    </nav>
+
+    <section>
+      <header>
+        <input type="color" name="seed-color" id="seed-color" />
+        <select name="rectangles" id="rectangles">
+          <option value="monochrome">Monochrome</option>
+          <option value="monochrome-dark">Monochrome-dark</option>
+          <option value="monochrome-light">Monochrome-light</option>
+          <option value="analogic">Analogic</option>
+          <option value="complement">Complement</option>
+          <option value="analogic-complement">Analogic-complement</option>
+          <option value="triad">Triad</option>
+          <option value="quad">Quad</option>
+        </select>
+        <button class="submit">Get color scheme</button>
+      </header>
+
+      <main>
+        <div class="colors color-1"></div>
+        <div class="colors color-2"></div>
+        <div class="colors color-3"></div>
+        <div class="colors color-4"></div>
+        <div class="colors color-5"></div>
+      </main>
+
+      <footer>
+        <p class="hexs hex-1" title="Click to copy">#F55A5A</p>
+        <p class="hexs hex-2" title="Click to copy">#2B283A</p>
+        <p class="hexs hex-3" title="Click to copy">#FBF3AB</p>
+        <p class="hexs hex-4" title="Click to copy">#AAD1B6</p>
+        <p class="hexs hex-5" title="Click to copy">#A626D3</p>
+      </footer>
+    </section>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
